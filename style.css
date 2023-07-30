@@ -1,0 +1,182 @@
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+
+}
+
+body {
+    
+     height: 100vh;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+
+     font-family: sans-serif;
+     background-color: powderblue;
+}
+
+/* book */
+.book {
+
+     position: relative;
+     width: 350px;
+     height: 500px;
+
+}
+
+.paper {
+
+     position: absolute;
+     width: 100%;
+     height: 100%;
+     top: 0;
+     left: 0;
+     perspective: 1500px;
+}
+
+.front,
+.back {
+
+     background-color: white;
+     position: absolute;
+     width: 100%;
+     height: 100%;
+     top: 0;
+     left: 0;
+     transform-origin: left;
+     transition: transform 0.5s;
+
+}
+
+.front {
+     z-index: 1;
+     backface-visibility: hidden;
+     border: 3px solid powderblue;
+}
+
+.back {
+     z-index: 0;
+}
+
+.front-content,
+.back-content {
+
+     width: 100%;
+     height: 100%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+
+.back-content {
+     transform: rotateY(180deg);
+}
+
+/* controller button */
+button {
+     border: none;
+     background-color: transparent;
+     cursor: pointer;
+     margin: 10px;
+}
+
+button:focus {
+     outline: none;
+
+}
+
+button:hover {
+     color: #636363;
+}
+
+i {
+     font-size: 50px;
+     color: gray;
+}
+
+/* paper flip effect */
+.flipped .front,
+.flipped .back {
+     transform: rotateY(-180deg);
+}
+
+/* paper stack order */
+#p15 {
+     z-index: 1;
+}
+
+#p14 {
+     z-index: 2;
+}
+
+#p13 {
+     z-index: 3;
+}
+
+#p12 {
+     z-index: 4;
+}
+
+#p11 {
+     z-index: 5;
+}
+
+#p10 {
+     z-index: 6;
+}
+
+#p9 {
+     z-index: 7;
+}
+
+#p8 {
+     z-index: 8;
+}
+
+#p7 {
+     z-index: 9;
+}
+
+#p6 {
+     z-index: 10;
+}
+
+#p5 {
+     z-index: 11;
+}
+
+#p4 {
+     z-index: 12;
+}
+
+#p3 {
+     z-index: 13;
+}
+
+#p2 {
+     z-index: 14;
+}
+
+#p1 {
+     z-index: 15;
+}
+
+.cover-img {
+
+     border: 3px solid powderblue;
+     width: 300px;
+     height: 300px;
+
+     object-fit: contain;
+
+     border-radius: 30px;
+}
+
+h4 {
+     font-family: 'Lugrasimo', cursive;
+}
+.birthday{
+      width: 500px;
+      height: 30px;
+}
